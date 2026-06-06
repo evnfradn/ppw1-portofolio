@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Pendaftaran</title>
+</head>
+
+<body>
+
+    <h2 align="center">Form Pendaftaran Mahasiswa</h2>
+
+    <div align="center">
+        <img src="https://via.placeholder.com/600x120?text=Banner+Pendaftaran" alt="Banner Pendaftaran" width="600"
+            height="120">
+    </div>
+    <br>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>Data Diri</legend>
+
+            Pas Foto:<br>
+            <img src="https://via.placeholder.com/100x130?text=Pas+Foto" alt="Pas Foto" width="100"
+                height="130"><br><br>
+
+            Nama Lengkap:<br>
+            <input type="text" name="nama" size="40" required><br><br>
+
+            Tempat Lahir:<br>
+            <input type="text" name="tempat_lahir"><br><br>
+
+            Tanggal Lahir:<br>
+            <input type="date" name="tanggal_lahir"><br><br>
+
+            Jenis Kelamin:<br>
+            <input type="radio" name="jk" value="L"> Laki-laki
+            <input type="radio" name="jk" value="P"> Perempuan<br><br>
+
+            Agama:<br>
+            <select name="agama">
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Katolik">Katolik</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Konghucu">Konghucu</option>
+            </select><br><br>
+
+            Program Studi:<br>
+            <select name="prodi">
+                <option value="ti">Teknik Informatika</option>
+                <option value="si">Sistem Informasi</option>
+                <option value="ak">Akuntansi</option>
+            </select><br><br>
+
+            Alamat Lengkap:<br>
+            <textarea name="alamat" rows="4" cols="45"></textarea><br><br>
+
+            Upload Ijazah:<br>
+            <input type="file" name="ijazah"><br><br>
+
+            <input type="submit" value="Kirim">
+            <input type="reset" value="Hapus">
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

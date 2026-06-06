@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:40px;
+}
+
+.normal{
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.modified{
+    text-indent:50px;
+    letter-spacing:2px;
+    word-spacing:10px;
+    line-height:2;
+    border:1px solid #ccc;
+    padding:10px;
+}
+.no-wrap{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    background:#f0f0f0;
+    padding:10px;
+    width:250px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<p class="normal">
+Ini contoh paragraf biasa tanpa perubahan apa-apa.
+Teksnya tampil normal seperti paragraf pada umumnya.
+</p>
+
+<p class="modified">
+Paragraf ini diberi beberapa properti CSS. 
+Baris pertama agak menjorok ke dalam karena memakai 
+text-indent. Jarak huruf dan kata juga dibuat lebih
+renggang supaya kelihatan bedanya. Selain itu tinggi
+barisnya juga dibuat lebih besar sehingga teksnya
+terlihat lebih lega saat dibaca.
+</p>
+
+<p class="no-wrap">
+Paragraf ini memakai white-space: nowrap jadi teksnya tidak akan pindah ke baris berikutnya walaupun tempatnya sempit.
+</p>
+
+</body>
+</html>

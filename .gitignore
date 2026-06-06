@@ -1,0 +1,50 @@
+
+# Berisi kredensial database (host, username, password)
+config.php
+**/config.php
+
+# ========================
+# File Upload dari User
+# ========================
+uploads/
+**/uploads/
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.*
+*.env
+
+# ========================
+# IDE & Editor
+# ========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ========================
+# OS Generated Files
+# ========================
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ========================
+# Log & Cache
+# ========================
+*.log
+*.cache
+error_log
+
+# ========================
+# Dependency (jika ada)
+# ========================
+vendor/
+node_modules/
+composer.lock
+package-lock.json

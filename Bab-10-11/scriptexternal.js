@@ -1,0 +1,1 @@
+console.log("Output dari file eksternal: Berhasil dimuat!");

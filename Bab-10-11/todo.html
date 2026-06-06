@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstr
+ap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5" style="max-width:500px">
+        <h2 class="mb-4">📝 To-Do List</h2>
+        <div class="input-group mb-3">
+            <input type="text" id="inputTugas" class="form-control" placeholder="Tambah tugas baru...">
+            <button class="btn btn-primary" id="btnTambah">Tambah</button>
+        </div>
+        <ul class="list-group" id="daftarTugas"></ul>
+        <p class="text-muted mt-2" id="info">Tidak ada tugas</p>
+    </div>
+    <script>
+        const input = document.getElementById("inputTugas");
+        const btnTambah = document.getElementById("btnTambah");
+        const daftar = document.getElementById("daftarTugas");
+        const info = document.getElementById("info");
+        let jumlah = 0;
+        function perbaruiInfo() {
+            info.textContent = jumlah === 0
+                ? "Tidak ada tugas"
+                : jumlah + " tugas tersisa";
+        }
+        function tambahTugas() {
+            const teks = input.value.trim();
+            if (teks === "") {
+                alert("Tugas tidak boleh kosong!");
+                return;
+            }
+            const li = document.createElement("li");
+            li.className = "list-group-item d-flex justify-content-between align-items-center";
+            const span = document.createElement("span");
+            span.textContent = teks;
+            span.style.cursor = "pointer";
+            span.title = "Klik untuk tandai selesai";
+            span.addEventListener("click", () => {
+                const done = span.style.textDecoration === "line-through";
+                span.style.textDecoration = done ? "none" : "line-through";
+                span.style.opacity = done ? "1" : "0.5";
+            });
+            const btnHapus = document.createElement("button");
+            btnHapus.textContent = "×";
+            btnHapus.className = "btn btn-sm btn-outline-danger";
+            btnHapus.addEventListener("click", () => {
+                li.remove(); jumlah--; perbaruiInfo();
+            });
+            li.appendChild(span);
+            li.appendChild(btnHapus);
+            daftar.appendChild(li);
+            input.value = "";
+            input.focus();
+            jumlah++; perbaruiInfo();
+        }
+        btnTambah.addEventListener("click", tambahTugas);
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") tambahTugas();
+        });
+    </script>
+</body>
+
+</html>
